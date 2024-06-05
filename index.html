@@ -204,6 +204,13 @@
       })
       const globalErrorBtn =
         errorBtnContainer.querySelector("#global-error-btn");
+      errorBtnContainer.addEventListener("click", ()=>{
+        throw new Error("This is a global error")
+      })
+
+    window.onerror = (err)=>{
+      console.log("welp thats an error")
+    }
     </script>
   </body>
 </html>
